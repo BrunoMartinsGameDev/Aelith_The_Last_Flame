@@ -54,4 +54,5 @@ public class PlayerController : MonoBehaviour
     }
 
     public void SetInputEnabled(bool enabled) => _inputEnabled = enabled;
+    public bool IsInputEnabled() => _inputEnabled;
 }

@@ -55,9 +55,12 @@ public class PlayerJump : MonoBehaviour
 
     private void Jump()
     {
-        _rb.linearVelocity = new Vector2(_rb.linearVelocity.x, stats.jumpForce);
-        _coyoteTimer = 0f;
-        _jumpsLeft--;
+        if(PlayerController.Instance.IsInputEnabled())
+        {
+            _rb.linearVelocity = new Vector2(_rb.linearVelocity.x, stats.jumpForce);
+            _coyoteTimer = 0f;
+            _jumpsLeft--;
+        }
     }
 
     private void ApplyFallMultiplier()

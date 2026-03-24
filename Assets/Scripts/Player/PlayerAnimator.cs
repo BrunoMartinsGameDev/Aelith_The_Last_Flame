@@ -7,6 +7,7 @@ public class PlayerAnimator : MonoBehaviour
     [SerializeField] private PlayerJump   jump;
     [SerializeField] private PlayerCombat combat;
     [SerializeField] private PlayerHealth health;
+    [SerializeField] private AbilityHandler ability;
 
     private Animator     _animator;
     private Rigidbody2D  _rb;
@@ -16,6 +17,7 @@ public class PlayerAnimator : MonoBehaviour
     private const string RUN  = "Run";
     private const string JUMP = "Jump";
     private const string FALL = "Fall";
+    private const string DASH = "Dash";
     private const string HURT = "Hurt";
     private const string DIE  = "Die";
 
@@ -31,6 +33,7 @@ public class PlayerAnimator : MonoBehaviour
     {
         if (health.IsDead)      { Play(DIE);  return; }
         if (health.IsHurt)      { Play(HURT); return; }
+        if (ability.IsDashing) { Play(DASH); return; }
 
         // ataque — usa o nome direto do SO via combo step
         if (combat.IsAttacking) return; // animator já foi setado pelo Combat

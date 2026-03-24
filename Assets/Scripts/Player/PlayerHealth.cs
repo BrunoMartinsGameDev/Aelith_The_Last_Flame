@@ -17,7 +17,7 @@ public class PlayerHealth : MonoBehaviour
 
         CurrentHealth = Mathf.Max(0, CurrentHealth - amount);
 
-        if (CurrentHealth == 0)
+        if (CurrentHealth <= 0)
         {
             IsDead = true;
             return;
