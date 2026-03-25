@@ -20,6 +20,8 @@ public class PlayerAnimator : MonoBehaviour
     private const string DASH = "Dash";
     private const string HURT = "Hurt";
     private const string DIE  = "Die";
+    private const string SHIELD_UP = "ShieldUp";
+    private const string SHIELD_IDLE = "ShieldIdle";
 
     void Start()
     {
@@ -35,6 +37,11 @@ public class PlayerAnimator : MonoBehaviour
         if (health.IsHurt)      { Play(HURT); return; }
         if (ability.IsDashing) { Play(DASH); return; }
 
+        if (ability.IsShielding)
+        {
+            Play(_currentState == SHIELD_UP || _currentState == SHIELD_IDLE ? SHIELD_IDLE : SHIELD_UP);
+            return;
+        }
         // ataque — usa o nome direto do SO via combo step
         if (combat.IsAttacking) return; // animator já foi setado pelo Combat
 

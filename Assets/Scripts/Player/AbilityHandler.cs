@@ -24,6 +24,15 @@ public class AbilityHandler : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.LeftShift) && CanDash && !_isDashing)
             if (Time.time - _lastDashTime >= stats.dashCooldown)
                 StartCoroutine(DashRoutine());
+        HandleShield();
+    }
+
+    private void HandleShield()
+    {
+        if(!CanShield) return;
+        if(_isDashing) return;
+
+        IsShielding = Input.GetKey(KeyCode.Mouse1);
     }
 
     private IEnumerator DashRoutine()

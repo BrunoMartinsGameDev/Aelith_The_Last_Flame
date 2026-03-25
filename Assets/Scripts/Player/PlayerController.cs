@@ -1,11 +1,13 @@
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(AbilityHandler))]
 public class PlayerController : MonoBehaviour
 {
     public static PlayerController Instance { get; private set; }
 
     [SerializeField] private PlayerStatsSO stats;
+    private AbilityHandler _ability;
 
     private Rigidbody2D _rb;
     private bool        _inputEnabled = true;
@@ -22,11 +24,18 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
+        _ability = GetComponent<AbilityHandler>();
     }
 
     void Update()
     {
         if (!_inputEnabled) return;
+        if (_ability != null && _ability.IsDashing) return; // não processa input de movimento durante o dash
+        if (_ability != null && _ability.IsShielding)
+        {
+            MoveInput = 0f; // não processa input de movimento durante o shield
+            return;
+        }
         MoveInput = Input.GetAxisRaw("Horizontal");
         HandleFlip();
     }
