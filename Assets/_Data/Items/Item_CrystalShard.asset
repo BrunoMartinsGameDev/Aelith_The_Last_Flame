@@ -9,10 +9,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b98ee43e12b87808971bdc7560f0677, type: 3}
-  m_Name: ShieldAbility
-  m_EditorClassIdentifier: Assembly-CSharp::AbilitySO
-  abilityName: Shield
+  m_Script: {fileID: 11500000, guid: 821a25bb982047220be53fe44a7d480d, type: 3}
+  m_Name: Item_CrystalShard
+  m_EditorClassIdentifier: Assembly-CSharp::ItemSO
+  itemName: Crystal Shard
   description: 
   icon: {fileID: 0}
-  isUnlocked: 1
+  type: 0
+  rarity: 0
+  healthRestore: 0
+  bonusAttack: 0
+  bonusDefense: 0
