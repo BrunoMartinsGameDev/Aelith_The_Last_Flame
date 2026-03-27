@@ -33,7 +33,7 @@ public class PlayerHealth : MonoBehaviour
         if (CurrentHealth <= 0)
         {
             IsDead = true;
-            PlayerController.Instance.SetInputEnabled(false);
+            PlayerController.Instance.enabled = false; // desativa controle do jogador ao morrer
             return;
         }
 

@@ -20,7 +20,12 @@ public class PlayerController : MonoBehaviour
         if (Instance != null) { Destroy(gameObject); return; }
         Instance = this;
     }
-
+    private void OnDisable() {
+        GetComponent<PlayerCombat>().enabled = false;
+        GetComponent<PlayerJump>().enabled = false;
+        GetComponent<PlayerHealth>().enabled = false;
+        GetComponent<AbilityHandler>().enabled = false;    
+    }
     void Start()
     {
         _rb = GetComponent<Rigidbody2D>();

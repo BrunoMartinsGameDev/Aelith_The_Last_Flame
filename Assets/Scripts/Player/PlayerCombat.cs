@@ -89,4 +89,13 @@ public class PlayerCombat : MonoBehaviour
             Time.time - _lastAttackTime > attackData.comboResetTime)
             _comboStep = 0;
     }
+
+    private void OnDrawGizmosSelected()
+    {
+        if (hitboxOrigin == null) return;
+
+        Gizmos.color = Color.red;
+        var currentCombo = attackData.comboSteps[_comboStep];
+        Gizmos.DrawWireSphere(hitboxOrigin.position, currentCombo.hitboxRadius);
+    }
 }
