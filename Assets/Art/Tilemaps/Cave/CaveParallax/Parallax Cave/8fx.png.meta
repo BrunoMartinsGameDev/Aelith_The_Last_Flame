@@ -1,19 +1,21 @@
 fileFormatVersion: 2
-guid: ffa8dcc684aab99439a54d5dd55e0acd
-AssetOrigin:
-  serializedVersion: 1
-  productId: 61672
-  packageName: 2D Platfrom Tile Set - Cave
-  packageVersion: 1.2
-  assetPath: Assets/Cave Platformer Tileset/Individual PNG files/Tileset/parallax_cave_holes_greenish/parallax_cave_holes_greenish_tiles_02.png
-  uploadId: 154679
+guid: 2cffe36fdb0707b5796c3149037502a1
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 2515246598874393985
+    second: 8fx_0
+  - first:
+      213: -6504275507272279627
+    second: 8fx_1
+  - first:
+      213: 7539976447410771497
+    second: 8fx_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -37,7 +39,7 @@ TextureImporter:
   generateCubemap: 6
   cubemapConvolution: 0
   seamlessCubemap: 0
-  textureFormat: -1
+  textureFormat: 1
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
@@ -50,7 +52,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -70,9 +72,9 @@ TextureImporter:
   compressionQualitySet: 0
   textureFormatSet: 0
   ignorePngGamma: 0
-  applyGammaDecoding: 1
+  applyGammaDecoding: 0
   swizzle: 50462976
-  cookieLightType: 1
+  cookieLightType: 0
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
@@ -128,12 +130,78 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: 8fx_0
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 19
+        width: 602
+        height: 1061
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18dea609473f7e220800000000000000
+      internalID: 2515246598874393985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 8fx_1
+      rect:
+        serializedVersion: 2
+        x: 603
+        y: 23
+        width: 270
+        height: 1057
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b913c323eb2cb5a0800000000000000
+      internalID: -6504275507272279627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 8fx_2
+      rect:
+        serializedVersion: 2
+        x: 1431
+        y: 79
+        width: 386
+        height: 994
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9261bb261a063a860800000000000000
+      internalID: 7539976447410771497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -142,7 +210,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      8fx_0: 2515246598874393985
+      8fx_1: -6504275507272279627
+      8fx_2: 7539976447410771497
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
